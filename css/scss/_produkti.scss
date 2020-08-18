@@ -1,0 +1,82 @@
+.produkti {
+    padding: 5rem 0;
+    text-align: center;
+    &__title {
+        color: $color-primary;
+        font-size: 4rem;
+    }
+
+    &__div {
+        width: 90vw;
+        margin: 0 auto;
+        max-width: 1170px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        grid-column-gap: 1.5rem;
+        grid-row-gap: 2rem;
+    }
+}
+
+
+.produkt {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+    &__img {
+        width: 200px;
+        height: auto;
+        border-radius: 50%;
+    }
+
+    &__title {
+        color: $color-primary;
+        font-size: 2rem;
+        text-transform: capitalize;
+    }
+    &__price{
+        color: $color-primary;
+        font-size: 2rem;
+    }
+
+    &__buttons {
+      
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        
+
+        &--korpa {
+            font-size: 1.3rem;
+            padding: 0.7rem 1.6rem;
+            text-transform: uppercase;
+            font-weight: bold;
+            cursor: pointer;
+            background: white;
+            color:$color-primary;
+            border: 2px solid $color-primary;
+            margin: .5rem 0;
+            
+        }
+
+        &--oko {
+            font-size: 1.3rem;
+            padding: 0.7rem 1.6rem;
+            text-transform: uppercase;
+            font-weight: bold;
+            cursor: pointer;
+            background: white;
+            color:$color-primary;
+            border: 2px solid $color-primary;
+            margin: .5rem 0;
+            text-decoration: none;
+        }
+    }
+
+
+}
+
+
+

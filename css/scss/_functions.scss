@@ -1,0 +1,56 @@
+
+$color-primary:#153551;
+$color-secondary:#FAF7E8;
+
+
+//Font
+
+
+//MEDIA QUERY VARS
+$bp-bigiboy:125em; //BIG BIG
+$bp-huge:110em; //1750 px
+$bp-huge-2:100em; //1600 px
+$bp-wide-1:92.4em; //1470 px
+$bp-wide-2:86.5em; //1385 px
+$bp-wide-3:80em; //1270 px
+$bp-wide-4:75em; //1200 px
+$bp-wide-5:66.3em; // 1096 px
+$bp-large:61.75em; // 992 px
+$bp-medium:50em; // 800 px
+$bp-small:42em; // 669px
+$bp-small-2:36em; // 573px
+$bp-small-3:30em; // 480px
+$bp-small-4:25.5em; // 411px
+$bp-small-5:21.8em; // 350px
+
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@keyframes moveInTop{
+    0% {
+        opacity: 0;
+        transform: translateY(-20rem);
+
+
+    }
+    100% {
+         opacity: 1;
+         transform: translate(0);
+    }
+} 
+
+.fromTop {
+    opacity: 0;
+    animation: moveInTop 0.5s ease-in 1 forwards;
+}
+
+
+

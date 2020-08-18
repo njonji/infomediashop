@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infomedia Shop</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/bfb2294917.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+</head>
+<body>
+         <!--   PRELOADER -->
+         <div id="preloader">
+            <div id="status">&nbsp;</div>
+          </div>  
+        <!-- PRELOADER END --> 
+
+ <!--  NAV -->
+ <nav class="navbar">
+
+    <div class="navbar__center">
+        <div class="navbar__menu">
+            <a href="/index.html">
+            <img class="navbar__menu--logo" src="./img/logo.png" alt="Logo">
+        </a>
+          
+            <a class="navbar__menu--link" href="/index.html">Početna</a>
+            <a class="navbar__menu--link" href="/placanje.html">Plaćanje</a>
+         
+       
+   
+        </div>
+        
+       
+
+        <div class="navbar__korpa">
+            <p class="navbar__korpa--title"> Korpa: </p>
+            <span>
+                <i class="fas fa-shopping-cart navbar__ikona"></i>
+            </span>
+            <div class="navbar__korpa--broj totalItems">0</div>
+
+    
+        </div>
+
+
+  
+    </div>
+
+    </div>
+</nav>
+<!--  NAV END -->
+
+
+  <!-- POPUP-->
+  <div class="overlay">
+    <div class="popup">
+    
+      <div class="zatvoriMe">
+          <i class="fas fa-window-close popup__close"></i>
+        </div>
+     
+      
+      <div class="popup__content korpaMain">
+
+          </div>
+      
+      <div class="popup__footer">
+          <h3 class="popup__footer--title">Ukupno: € <span class="popup__korpa--total totalPrice">0</span></h3>
+          <a class="clear popup__korpa--btn customButton customButton__alert">ispazni korpu</a>
+          <a href="/placanje.html" class="popup__korpa--btn customButton customButton__succes">idi na plaćanje</a>
+      </div>
+  </div>
+</div>
+<!-- POPUP -->
+
+
+    <div class="produktSingleDOM">
+    
+
+    </div>
+    
+
+      <script src="js/main.js"></script>
+   
+</body>
+</html>  

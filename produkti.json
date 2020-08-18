@@ -1,0 +1,117 @@
+{
+  "items": [
+    {
+        
+        "id": "1",
+        "title": "Leaf",
+        "price": 12.00,
+        "images":  [
+            "./img/produkti/leaf/1.jpg", 
+            "./img/produkti/leaf/2.jpg", 
+             "./img/produkti/leaf/3.jpg",
+             "./img/produkti/leaf/4.jpg"
+        ],
+        "desc":"Staklene naušnice, modne ženske. 100% novo i visoke kvalitete.Specifičan modni dizajn koji plijeni pažnju."
+    
+    },
+    {
+        
+        "id": "2",
+        "title": "Blue Eye",
+        "price": 8.00,
+        "images":  [
+            "./img/produkti/blue/1.jpg", 
+            "./img/produkti/blue/2.jpg", 
+             "./img/produkti/blue/3.jpg",
+             "./img/produkti/blue/4.jpg"
+        ],
+        "desc":"Staklene naušnice, modne ženske. 100% novo i visoke kvalitete.Specifičan modni dizajn koji plijeni pažnju."
+    
+    },
+    {
+        
+        "id": "3",
+        "title": "Green Cactus",
+        "price": 21.00,
+        "images":  [
+            "./img/produkti/kaktus/1.jpg", 
+            "./img/produkti/kaktus/2.jpg", 
+             "./img/produkti/kaktus/3.jpg",
+             "./img/produkti/kaktus/4.jpg"
+        ],
+        "desc":"Staklene naušnice, modne ženske. 100% novo i visoke kvalitete.Specifičan modni dizajn koji plijeni pažnju."
+    
+    },
+    {
+        
+        "id": "4",
+        "title": "Black Eye",
+        "price": 5.65,
+        "images":  [
+            "./img/produkti/black/1.jpg", 
+            "./img/produkti/black/2.jpg", 
+             "./img/produkti/black/3.jpg",
+             "./img/produkti/black/4.jpg"
+        ],
+        "desc":"Staklene naušnice, modne ženske. 100% novo i visoke kvalitete.Specifičan modni dizajn koji plijeni pažnju."
+    
+    },
+    {
+        
+        "id": "5",
+        "title": "Cyrstal",
+        "price": 12.40,
+        "images":  [
+            "./img/produkti/kristal/1.jpg", 
+            "./img/produkti/kristal/2.jpg", 
+             "./img/produkti/kristal/3.jpg",
+             "./img/produkti/kristal/4.jpg"
+        ],
+        "desc":"Staklene naušnice, modne ženske. 100% novo i visoke kvalitete.Specifičan modni dizajn koji plijeni pažnju."
+    
+    },
+    {
+        
+        "id": "6",
+        "title": "Love",
+        "price": 24.50,
+        "images":  [
+            "./img/produkti/love/1.jpg", 
+            "./img/produkti/love/2.jpg", 
+             "./img/produkti/love/3.jpg",
+             "./img/produkti/love/4.jpg"
+        ],
+        "desc":"Staklene naušnice, modne ženske. 100% novo i visoke kvalitete.Specifičan modni dizajn koji plijeni pažnju."
+    
+    },
+    {
+        
+        "id": "7",
+        "title": "Watermellon",
+        "price": 11.00,
+        "images":  [
+            "./img/produkti/lubenica/1.jpg", 
+            "./img/produkti/lubenica/2.jpg", 
+             "./img/produkti/lubenica/3.jpg",
+             "./img/produkti/lubenica/4.jpg"
+        ],
+        "desc":"Staklene naušnice, modne ženske. 100% novo i visoke kvalitete.Specifičan modni dizajn koji plijeni pažnju."
+    
+    },
+    {
+        
+        "id": "8",
+        "title": "Red Eye",
+        "price": 6.00,
+        "images":  [
+            "./img/produkti/red/1.jpg", 
+            "./img/produkti/red/2.jpg", 
+             "./img/produkti/red/3.jpg",
+             "./img/produkti/red/4.jpg"
+        ],
+        "desc":"Staklene naušnice, modne ženske. 100% novo i visoke kvalitete.Specifičan modni dizajn koji plijeni pažnju."
+    
+    }
+ 
+  ]
+}

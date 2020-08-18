@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infomedia Shop</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/bfb2294917.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+</head>
+<body>
+    <!--   PRELOADER -->
+    <div id="preloader">
+    <div id="status">&nbsp;</div>
+    </div>  
+<!-- PRELOADER END --> 
+
+ <!--  NAV -->
+ <nav class="navbar">
+
+    <div class="navbar__center">
+        <div class="navbar__menu">
+            <a href="/index.html">
+            <img class="navbar__menu--logo" src="./img/logo.png" alt="Logo">
+        </a>
+          
+            <a class="navbar__menu--link" href="/index.html">Početna</a>
+         
+       
+   
+        </div>
+      
+       
+
+        <div class="navbar__korpa" style="display:none !important;">
+            <p class="navbar__korpa--title">Vaša Korpa: </p>
+            <span>
+                <i class="fas fa-shopping-cart navbar__ikona"></i>
+            </span>
+            <div class="navbar__korpa--broj">0</div>
+
+    
+        </div> 
+
+    </div>
+
+    </div>
+</nav>
+<!--  NAV END -->
+
+  <!-- POPUP-->
+  <div class="overlay">
+    <div class="popup">
+    
+      <div class="zatvoriMe">
+          <i class="fas fa-window-close popup__close"></i>
+        </div>
+     
+      
+      <div class="popup__content">
+
+          </div>
+      
+      <div class="popup__footer">
+          <h3 class="popup__footer--title">Ukupno: € <span class="popup__korpa--total">0</span></h3>
+          <a class="clear popup__korpa--btn popup__korpa--alert">ispazni korpu</a>
+          <a href="/placanje.html" class="popup__korpa--btn popup__korpa--succes">idi na plaćanje</a>
+      </div>
+  </div>
+</div>
+<!-- POPUP -->
+
+
+  
+        <h2 class="pageTitle">
+            Korpa
+        </h2>
+
+
+
+
+<div class="myCart">
+
+   <div class="myCart__left">
+       <h2 class="myCart__left--title">VAŠA NARUDŽBA</h2>
+    <div class="myCart__korpa">
+
+    </div>
+   
+      <h3 class="popup__footer--title" >Ukupno za platiti: € <span class="totalPrice" style="font-size: 2rem;" >0</span></h3>
+      <h3 class="popup__footer--title">Ukupno Artikala: <span class="totalItems" style="font-size: 2rem;" >0</span></h3>
+    
+   </div>
+   <div class="myCart__right">
+       <h2 class="myCart__right--title">PODACI ZA PLAĆANJE</h2>
+
+           <form action="#" class="forma">
+
+                <input type="text" class="forma__ime forma__input" id="name" name="name" placeholder="Vaše ime i prezime" >
+                <p class="forma__info">Ime i prezime ne može biti prazno niti sadržavati brojeve i znakove.</p>
+         
+                <input type="text" class="forma__input" id="address" name="address" placeholder="Adresa" >
+                <p class="forma__info">Adresa ne može biti prazna</p>
+        
+                <input type="text" name="phone" class="forma__input" id="phone" placeholder="Broj telefona">
+                <p class="forma__info">Polje telefona morati imati najmanje 9 brojeva bez znakova i slova.</p>
+     
+                <input type="text" name="email" class="forma__input" id="email" placeholder="Email">
+
+                <p class="forma__info"> Molimo vas da unesete ispravan email.</p>
+    
+           <div id="submit-btn">
+            <button class="customButton customButton__succes forma__button" title="text" role="button" type="submit">Pošalji</button>
+        </div>
+           </form>
+
+
+   </div>
+</div>
+
+
+
+<script src="js/main.js"></script>
+</body>
+</html>

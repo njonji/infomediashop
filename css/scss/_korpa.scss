@@ -1,0 +1,84 @@
+.myCart {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    @media only screen and (max-width:$bp-small) {
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr;
+        
+      }
+    
+    &__left {
+        grid-column: 1 / 2;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        @media only screen and (max-width:$bp-small) {
+           grid-row: 1 / 2;
+           grid-column: 1 / -1;
+          }
+          
+        &--title {
+            font-size: 2rem;
+        }
+        
+    }
+    &__right {
+        grid-column: 2 / 3;
+
+        @media only screen and (max-width:$bp-small) {
+            grid-row: 2 / -1;
+            grid-column: 1 / -1;
+            display: grid;
+            justify-items: center;
+            align-items: center;
+           }
+
+        &--title {
+            font-size: 2rem;
+        }
+
+    }
+
+    &__korpa {
+        width: 30rem;
+    }
+}
+
+.forma {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+
+    &__input {
+        display: block;
+        padding: 1.4rem 1rem;
+        margin:.3rem 0;
+        width: 40rem;
+        border-radius: 10px;
+        border:3px solid #eee;
+        outline: none !important;
+
+        @media only screen and (max-width:$bp-medium) {
+            width: 30rem;
+           }
+
+    }
+
+    &__info {
+        font-size: 1rem;
+        font-weight: bold;
+      
+        opacity: 0; 
+        height: 0;
+    }
+
+    &__button {
+        margin: 1rem 0;
+       
+      
+    }
+}

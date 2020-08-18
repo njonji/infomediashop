@@ -1,0 +1,79 @@
+.navbar {
+    position: sticky;
+    top: 0;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border-bottom: 4px solid $color-primary;
+    background: white;
+    z-index: 1;
+  
+
+    &__center {
+        position: relative;
+        width: 100%;
+        max-width: 1150px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 2.5rem;
+        
+    }
+
+    &__menu {
+       display: flex;
+       justify-content: center;
+       align-items: center;
+        &--logo {
+            width: 60px;
+            height: auto;
+        }
+
+        &--link {
+            font-size: 1.6rem;
+            font-weight: bold;
+            color:$color-primary;
+            text-decoration: none;
+            margin: 1rem 0 0 3rem;
+
+         
+        }
+    }
+
+
+    &__korpa {
+        position: relative;
+        cursor: pointer;
+        margin-right: 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        transition: all .3s ease-in-out;
+
+        &--title {
+            color:$color-primary;
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+        &--broj {
+            position: absolute;
+            top: -1px;
+            right: -15px;
+            background: $color-secondary;
+            padding: 0 10px;
+            border-radius: 30%;
+            color: $color-primary;
+            font-size: 1.8rem;
+        }
+    }
+
+    &__ikona {
+        font-size: 3rem;
+        color:$color-primary;
+    }
+
+  }
+
+
