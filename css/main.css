@@ -127,21 +127,9 @@ html {
   font-size: 62.5%;
 }
 
-@media only screen and (max-width: 110em) {
-  html {
-    font-size: 57%;
-  }
-}
-
 @media only screen and (max-width: 61.75em) {
   html {
-    font-size: 53%;
-  }
-}
-
-@media only screen and (max-width: 30em) {
-  html {
-    font-size: 47%;
+    font-size: 57%;
   }
 }
 
@@ -254,12 +242,25 @@ body {
   height: auto;
 }
 
+@media only screen and (max-width: 25.5em) {
+  .navbar__menu--logo {
+    width: 50px;
+  }
+}
+
 .navbar__menu--link {
   font-size: 1.6rem;
   font-weight: bold;
   color: #153551;
   text-decoration: none;
   margin: 1rem 0 0 3rem;
+}
+
+@media only screen and (max-width: 25.5em) {
+  .navbar__menu--link {
+    font-size: 1.5rem;
+    margin: 1rem 0 0 1rem;
+  }
 }
 
 .navbar__korpa {
@@ -724,6 +725,12 @@ body {
 
 .artikal__desc {
   font-size: 2rem;
+}
+
+@media only screen and (max-width: 42em) {
+  .artikal__desc {
+    text-align: center;
+  }
 }
 
 .artikal__price {
