@@ -281,11 +281,11 @@ const submitBtn = document.querySelector(".forma__button");
 
             <div class="popup__korpa--controls">
      
-                <i class="fas fa-chevron-up popup__korpa--chevron" data-id=${item.id}></i>
+                <i class="fas fa-plus-square popup__korpa--chevron" data-id=${item.id}></i>
 
                 <p class="popup__korpa--cijena" data-id=${item.id}>${item.amount} </p>
 
-                <i class="fas fa-chevron-down popup__korpa--chevron" data-id=${item.id}></i> 
+                <i class="fas fa-minus-square popup__korpa--chevron" data-id=${item.id}></i> 
             </div>
     
     
@@ -376,7 +376,7 @@ const submitBtn = document.querySelector(".forma__button");
                    removeItem.parentElement.parentElement.classList.add('cart__item--removed');
                    setTimeout(() => item.removeChild(removeItem.parentElement.parentElement), 250);
                     this.ukloniItem(id)
-               } else if (e.target.classList.contains("fa-chevron-up")) {
+               } else if (e.target.classList.contains("fa-plus-square")) {
                     let addAmount = e.target;
                     let id = addAmount.dataset.id;
                     let tempItem = korpa.find(item => item.id === id);
@@ -384,7 +384,7 @@ const submitBtn = document.querySelector(".forma__button");
                     Storage.saveKorpa(korpa);
                     this.setKorpaValues(korpa);
                     addAmount.nextElementSibling.innerText = tempItem.amount
-               } else if (e.target.classList.contains("fa-chevron-down")) {
+               } else if (e.target.classList.contains("fa-minus-square")) {
                     let lowerAmount = e.target
                     let id = lowerAmount.dataset.id;
                     let tempItem = korpa.find(item => item.id === id);
