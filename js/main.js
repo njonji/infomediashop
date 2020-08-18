@@ -80,7 +80,7 @@ const submitBtn = document.querySelector(".forma__button");
 
  // PRIKAZI PRODUKT
 
- class UI {
+ class Interface {
 
   displayProducts(products) {
       let result = '';
@@ -402,7 +402,8 @@ const submitBtn = document.querySelector(".forma__button");
                             showCancelButton: true,
                             confirmButtonColor: 'rgba(220, 20, 60, 1)',
                             cancelButtonColor: 'rgba(46, 153, 41, 1)',
-                            confirmButtonText: 'Da, izbaci artikal!'
+                            confirmButtonText: 'Da, izbaci artikal!',
+                            cancelButtonText:'Odustani'
                           }).then((result) => {
                             if (result.value) {
                                 lowerAmount.parentElement.parentElement.classList.add('cart__item--removed');
@@ -646,26 +647,26 @@ class SingleProduct {
 
 
  document.addEventListener("DOMContentLoaded", () => {
-     const ui = new UI();
+     const interface = new Interface();
      const products = new Products();
      const validation = new Validation();
      const singleProduct = new SingleProduct;
      
        
-     ui.setupAPP();
+     interface.setupAPP();
      validation.validatePayment();
      
   
  
      //GET PRODUCTS
      products.getProducts().then(products => {
-         ui.displayProducts(products);
+        interface.displayProducts(products);
          Storage.saveProducts(products);
         }).then(() => {
-            ui.getCartButtons();
-            ui.getViewButtons();
-            ui.getSingleCartButton();
-            ui.korpaLogic(); 
+            interface.getCartButtons();
+            interface.getViewButtons();
+            interface.getSingleCartButton();
+            interface.korpaLogic(); 
             singleProduct.initSingleProduct(); 
         });
     
