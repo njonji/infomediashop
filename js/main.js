@@ -564,9 +564,9 @@ class SingleProduct {
 
 
         const patterns = {
-            phone:/^\d{9,}$/,
-            name:/^[a-z]{1,}$/i,
+            name:/^[a-z\s]{1,}$/i,
             address:/^(?!\s*$).+/,
+            phone:/^\d{9,}$/,
             email:/^([a-z\d\.-]+)@([a-z\d-]+)\.([a-z]+)(\.[a-z]+)?$/
         }
 
