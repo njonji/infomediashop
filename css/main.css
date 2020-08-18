@@ -315,7 +315,7 @@ body {
   height: auto;
   z-index: 3;
   background: white;
-  padding: 2.5rem 1.5rem 1.5rem 1.5rem;
+  padding: 3.5rem 1.5rem 1.5rem 1.5rem;
   -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
   -webkit-transform: translateY(-100%);
@@ -354,9 +354,15 @@ body {
 }
 
 .popup__close {
-  font-size: 2.7rem;
+  font-size: 3rem;
   cursor: pointer;
   color: #153551;
+}
+
+@media only screen and (max-width: 42em) {
+  .popup__close {
+    font-size: 3.5rem;
+  }
 }
 
 .popup__footer {
@@ -420,6 +426,13 @@ body {
   color: #153551;
   cursor: pointer;
   font-size: 2rem;
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 42em) {
+  .popup__korpa--chevron {
+    font-size: 2.5rem;
+  }
 }
 
 .popup__korpa--cijena {
