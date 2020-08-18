@@ -393,10 +393,25 @@ const submitBtn = document.querySelector(".forma__button");
                     Storage.saveKorpa(korpa);
                     this.setKorpaValues(korpa);
                     lowerAmount.previousElementSibling.innerText = tempItem.amount;
+
                     } else {
-                        lowerAmount.parentElement.parentElement.classList.add('cart__item--removed');
-                       setTimeout(() => item.removeChild(lowerAmount.parentElement.parentElement), 250);
-                        this.ukloniItem(id)
+
+                        Swal.fire({
+                            title: 'Da li ste sigurni da želiti izbaciti ovaj artikal iz korpe ?',
+                            icon: 'warning',
+                            showCancelButton: true,
+                            confirmButtonColor: 'rgba(220, 20, 60, 1)',
+                            cancelButtonColor: 'rgba(46, 153, 41, 1)',
+                            confirmButtonText: 'Da, izbaci artikal!'
+                          }).then((result) => {
+                            if (result.value) {
+                                lowerAmount.parentElement.parentElement.classList.add('cart__item--removed');
+                                setTimeout(() => item.removeChild(lowerAmount.parentElement.parentElement), 250);
+                                 this.ukloniItem(id)
+                            }
+                          })
+
+
                     }
             }  
             })
