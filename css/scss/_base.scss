@@ -36,6 +36,11 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 
+input[type=number] {
+    -moz-appearance: textfield;
+  }
+
+
 ::selection {
     background-color: $color-primary !important;
     color:white;

@@ -1,6 +1,10 @@
 Infomedia Shop App
 
 U procesu pravljenja ovog Demo Shopa kompletan kod sam napisao lično od nule, ali sam se koristio online tutorialima, 
-dokumentacijom, kao i Stack Overflowom. Nisam koristio template niti CSS biblioteke. U potpunosti razumijem svaku liniju 
-koda i kako ista doprinosi radu ovog Demo Shopa. Nadam da je to uredu i da je to proces rada koji je vama prihvatljiv. 
+dokumentacijom, kao i Stack Overflowom. Nisam koristio template niti CSS biblioteke. U potpunosti razumijem svaku liniju
+koda i kako ista doprinosi radu ovog Demo Shopa. Nadam da je to uredu i da je to proces rada koji je vama prihvatljiv.
+
+Što se samog izgleda Shopa tiče više sam obraćao pažnju na JavaScript i funkcionalnost Shopa nego na izgled, mada sam
+ga  učinio responsive kako je traženo u zadatku. Nisam dodavao slike za uljepšavanje, backgrounde i slično, ali sam se 
+potrudio da user experience bude fluidan i ugodan. 
 
