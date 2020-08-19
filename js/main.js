@@ -50,6 +50,7 @@ function fade(element) {
  //Single Product Page
  const displayDivSingle = document.querySelector(".produktSingleDOM");
 
+
 //Forma Validation Selectors & Patterns
 
 const inputs = document.querySelectorAll(".forma__input");
@@ -78,6 +79,8 @@ const submitBtn = document.querySelector(".forma__button");
      }
  }
 
+
+
  // PRIKAZI PRODUKT
 
  class Interface {
@@ -91,8 +94,9 @@ const submitBtn = document.querySelector(".forma__button");
 
           <div class="produkt">
           <h3 class="produkt__title">${product.title}</h3>
+          <a href="/artikal.html" class="produkt__imagelink" data-id="${product.id}">
               <img src=${product.images[0]} alt="Produkt" class="produkt__img">
-        
+              </a>
           <h4 class="produkt__price">€${product.price}</h4>
 
           <div class="produkt__buttons">
@@ -123,9 +127,10 @@ const submitBtn = document.querySelector(".forma__button");
 
   getCartButtons() {
      let korpaBtns = [...document.querySelectorAll(".produkt__buttons--korpa")];
-
+    
      btnsDOM = korpaBtns;
 
+     
      korpaBtns.forEach(button => {
          const id = button.dataset.id;
          let inCart = korpa.find(item => item.id === id);
@@ -172,7 +177,7 @@ const submitBtn = document.querySelector(".forma__button");
                /*      e.target.disabled  = true; */
                      
                     let productAmount = parseInt(e.target.previousElementSibling.value, 10);
-
+                  
                     let kupljen = korpa.find(item => item.id === id );
 
                     if(productAmount <= 0) {
@@ -191,7 +196,7 @@ const submitBtn = document.querySelector(".forma__button");
                               result.value ? this.prikazipopupSingle() : '';
                            
                           }) 
-                        
+                          
                     } else {
                         //Get singular product amount
                         let korpaItem = {...Storage.getProduct(id), amount:productAmount};
@@ -214,11 +219,20 @@ const submitBtn = document.querySelector(".forma__button");
                         this.prikazipopupSingle();
                     }
 
+                }  else if (e.target.classList.contains("artikal__input")) {
+                    let gledaniArtikal = JSON.parse(localStorage.getItem('viewProduct'));
+                
 
-                   
+                    e.target.addEventListener('keyup', e =>  {
+                        let productAmount =  parseFloat(e.target.value).toFixed(2);
+                        let parsedPrice = parseFloat(gledaniArtikal.price).toFixed(2);
+
+                        productAmount > 0 ? e.target.previousElementSibling.innerText = productAmount * parsedPrice : ''
                     
-
-                }
+            
+                       
+                })
+                }  
             })
         }
 
@@ -226,13 +240,14 @@ const submitBtn = document.querySelector(".forma__button");
  }
 
   getViewButtons() {
-    
+    let imageLinks = [...document.querySelectorAll(".produkt__imagelink")];
     let viewBtns = [...document.querySelectorAll(".produkt__buttons--oko")];
-
-    viewBtns.forEach(button => {
+    const combinedViewBtns = viewBtns.concat(imageLinks)
+    
+     combinedViewBtns.forEach(button => {
         const id = button.dataset.id;
-           
-        button.addEventListener('click', e=> {
+        
+        button.addEventListener('click', e => {
       
            let korpaItem = {...Storage.getProduct(id), amount:1};  
             
@@ -465,6 +480,7 @@ class SingleProduct {
         let gledaniArtikal = JSON.parse(localStorage.getItem('viewProduct'));
         const inCartItem = korpa.find(item => item.id === gledaniArtikal.id );
 
+        
        gledaniArtikal = `
                
                <div class="artikal">
@@ -487,21 +503,20 @@ class SingleProduct {
                <h2 class="artikal__title">${gledaniArtikal.title}</h2>
                <p class="artikal__desc">${gledaniArtikal.desc}</p>
 
-               <h4 class="artikal__price">€${gledaniArtikal.price}</h4>
+               <div class="artikal__cijenaDiv">
+               <h4 class="artikal__price">Cijena: €</h4>
+               <h4 class="artikal__price">${gledaniArtikal.price}</h4>
 
-               <div class="artikal__buttons">
-              
-
-                 
-               <input class="artikal__input" type="number" pattern="^[0-9]" title='Only Number' min="1" step="1" value="${gledaniArtikal.amount}">
-
-                   <button  class="artikal__addItem" data-id="${gledaniArtikal.id}">
+               <input class="artikal__input" type="number" value="${gledaniArtikal.amount}">
+               <button  class="artikal__addItem" data-id="${gledaniArtikal.id}">
                    
-                       <i class="fas fa-shopping-cart" ></i>
-                       Dodaj u korpu
-                   </button>
-           
+               <i class="fas fa-shopping-cart" ></i>
+               Dodaj u korpu
+              </button>
                </div>
+            
+           
+            
                
            </div>
                
@@ -652,7 +667,7 @@ class SingleProduct {
      const validation = new Validation();
      const singleProduct = new SingleProduct;
      
-       
+   
      interface.setupAPP();
      validation.validatePayment();
      

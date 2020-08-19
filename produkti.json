@@ -4,7 +4,7 @@
         
         "id": "1",
         "title": "Leaf",
-        "price": 12.00,
+        "price": 12.50,
         "images":  [
             "./img/produkti/leaf/1.jpg", 
             "./img/produkti/leaf/2.jpg", 
@@ -18,7 +18,7 @@
         
         "id": "2",
         "title": "Blue Eye",
-        "price": 8.00,
+        "price": 8.75,
         "images":  [
             "./img/produkti/blue/1.jpg", 
             "./img/produkti/blue/2.jpg", 
@@ -32,7 +32,7 @@
         
         "id": "3",
         "title": "Green Cactus",
-        "price": 21.00,
+        "price": 21.25,
         "images":  [
             "./img/produkti/kaktus/1.jpg", 
             "./img/produkti/kaktus/2.jpg", 

@@ -58,6 +58,8 @@
 
     &__price {
         font-size: 2rem;
+        margin:0 1rem 0 0;
+        width: 100px;
     }
 
     &__info {
@@ -69,8 +71,9 @@
     }
 
     &__input {
-        width: 35px;
-        padding: 0.7rem 0 0.7rem 1rem;
+        width: auto;
+        padding: 1rem;
+        margin:0 1rem
     }
 
     &__addItem {
@@ -82,6 +85,17 @@
         color:$color-primary;
         border: 2px solid $color-primary;
         margin: 1rem 0;
+        transition: all .3s ease-in-out;
+
+        &:hover {
+            background: rgba($color-primary, .1);
+        }
+    }
+
+    &__cijenaDiv {
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
  
