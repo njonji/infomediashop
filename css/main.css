@@ -758,7 +758,7 @@ input[type=number]::-webkit-outer-spin-button {
 .artikal__price {
   font-size: 2rem;
   margin: 0 1rem 0 0;
-  width: 100px;
+  width: auto;
 }
 
 .artikal__info {
@@ -774,6 +774,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 .artikal__input {
   width: auto;
+  max-width: 5rem;
   padding: 1rem;
   margin: 0 1rem;
 }
@@ -805,6 +806,8 @@ input[type=number]::-webkit-outer-spin-button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .galerija {

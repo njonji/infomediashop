@@ -97,7 +97,7 @@ const submitBtn = document.querySelector(".forma__button");
           <a href="/artikal.html" class="produkt__imagelink" data-id="${product.id}">
               <img src=${product.images[0]} alt="Produkt" class="produkt__img">
               </a>
-          <h4 class="produkt__price">€${product.price}</h4>
+          <h4 class="produkt__price">€${product.price.toFixed(2)}</h4>
 
           <div class="produkt__buttons">
               
@@ -219,20 +219,12 @@ const submitBtn = document.querySelector(".forma__button");
                         this.prikazipopupSingle();
                     }
 
-                }  else if (e.target.classList.contains("artikal__input")) {
-                    let gledaniArtikal = JSON.parse(localStorage.getItem('viewProduct'));
-                
-
-                    e.target.addEventListener('keyup', e =>  {
-                        let productAmount =  parseFloat(e.target.value).toFixed(2);
-                        let parsedPrice = parseFloat(gledaniArtikal.price).toFixed(2);
-
-                        productAmount > 0 ? e.target.previousElementSibling.innerText = productAmount * parsedPrice : ''
-                    
-            
-                       
-                })
-                }  
+                }  else if (e.target.classList.contains("artikal__cijenaDiv")) {
+                  let gledaniArtikal = JSON.parse(localStorage.getItem('viewProduct'));
+                  e.target.childNodes.forEach(child => {child.addEventListener('keyup', e => {
+                    let productAmount =  parseFloat(e.target.value);
+                    let parsedPrice = parseFloat(gledaniArtikal.price);
+                    productAmount > 0 ? e.target.previousElementSibling.innerText = (productAmount * parsedPrice).toFixed(2) : ''                       })                       })                }  
             })
         }
 
@@ -290,7 +282,7 @@ const submitBtn = document.querySelector(".forma__button");
             <div>
                 
                 <h4 class="popup__korpa--title">${item.title}</h4>
-                <h5  class="popup__korpa--price">€${item.price}</h5>
+                <h5  class="popup__korpa--price">€${item.price.toFixed(2)}</h5>
                 <span class="remove-item popup__korpa--remove" data-id=${item.id}> Ukloni </span>
             </div>
 
@@ -316,7 +308,7 @@ const submitBtn = document.querySelector(".forma__button");
             <div>
                 
                 <h4 class="popup__korpa--title">${item.title}</h4>
-                <h5  class="popup__korpa--price">€${item.price}</h5>
+                <h5  class="popup__korpa--price">€${item.price.toFixed(2)}</h5>
 
             </div>
 
@@ -504,15 +496,16 @@ class SingleProduct {
                <p class="artikal__desc">${gledaniArtikal.desc}</p>
 
                <div class="artikal__cijenaDiv">
-               <h4 class="artikal__price">Cijena: €</h4>
-               <h4 class="artikal__price">${gledaniArtikal.price}</h4>
+               <h4 class="artikal__pricetext"> Cijena: <span class="artikal__pricetext--span"> €</span> </h4>
+               <h4 class="artikal__price">${gledaniArtikal.price.toFixed(2)}</h4>
 
                <input class="artikal__input" type="number" value="${gledaniArtikal.amount}">
+
                <button  class="artikal__addItem" data-id="${gledaniArtikal.id}">
-                   
                <i class="fas fa-shopping-cart" ></i>
                Dodaj u korpu
               </button>
+
                </div>
             
            
