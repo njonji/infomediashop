@@ -180,7 +180,7 @@ const submitBtn = document.querySelector(".forma__button");
                   
                     let kupljen = korpa.find(item => item.id === id );
 
-                    if(productAmount <= 0) {
+                    if(productAmount <=0 || !productAmount) {
                         Swal.fire({
                             icon: 'error',
                             title: 'Molimo vas da unesete pozitivan broj.',
