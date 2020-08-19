@@ -220,13 +220,29 @@ const submitBtn = document.querySelector(".forma__button");
                     }
 
                 }  else if (e.target.classList.contains("artikal__cijenaDiv")) {
+                    
                   let gledaniArtikal = JSON.parse(localStorage.getItem('viewProduct'));
                   e.target.childNodes.forEach(child => {child.addEventListener('keyup', e => {
                     let productAmount =  parseFloat(e.target.value);
                     let parsedPrice = parseFloat(gledaniArtikal.price);
-                    productAmount > 0 ? e.target.previousElementSibling.innerText = (productAmount * parsedPrice).toFixed(2) : ''                       })                       })                }  
-            })
-        }
+                    productAmount > 0 ? e.target.previousElementSibling.innerText = (productAmount * parsedPrice).toFixed(2) : ''                       
+                    })                    
+                  })             
+               }  else if (e.target.classList.contains("artikal__input")) {
+
+                let gledaniArtikal = JSON.parse(localStorage.getItem('viewProduct'));
+                e.target.addEventListener('keyup', e => {
+                  let productAmount =  parseFloat(e.target.value);
+                  let parsedPrice = parseFloat(gledaniArtikal.price);
+                  productAmount > 0 ? e.target.previousElementSibling.innerText = (productAmount * parsedPrice).toFixed(2) : ''                       
+                  })                    
+                        
+             }  
+
+             //Zadnji else if je zbog mobilnih aparata.
+
+         })
+         }
 
 
  }

@@ -810,12 +810,6 @@ input[type=number]::-webkit-outer-spin-button {
       flex-wrap: wrap;
 }
 
-@media only screen and (max-width: 25.5em) {
-  .artikal__cijenaDiv {
-    height: 50rem;
-  }
-}
-
 .galerija {
   width: 40rem;
   display: -ms-grid;
